@@ -1,6 +1,4 @@
-package com.leesin.chapter9.IntroduceNullObject;
-
-import java.math.BigDecimal;
+package com.leesin.chapter9.IntroduceNullObject.example1;
 
 /**
  * @description:

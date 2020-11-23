@@ -1,6 +1,4 @@
-package com.leesin.chapter9.IntroduceNullObject;
-
-import javafx.scene.layout.BackgroundImage;
+package com.leesin.chapter9.IntroduceNullObject.example1;
 
 /**
  * @description:
@@ -24,7 +22,7 @@ public class Customer implements Nullable{
         return false;
     }
 
-    static Customer newNull() {
+    public static Customer newNull() {
         return new NullCustomer();
     }
 

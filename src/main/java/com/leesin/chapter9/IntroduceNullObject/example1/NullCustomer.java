@@ -1,4 +1,4 @@
-package com.leesin.chapter9.IntroduceNullObject;
+package com.leesin.chapter9.IntroduceNullObject.example1;
 
 /**
  * @description:

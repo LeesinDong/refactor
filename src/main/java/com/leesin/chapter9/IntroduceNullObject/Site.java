@@ -1,6 +1,7 @@
 package com.leesin.chapter9.IntroduceNullObject;
 
-import com.sun.xml.internal.bind.v2.TODO;
+import com.leesin.chapter9.IntroduceNullObject.example1.BillingPlan;
+import com.leesin.chapter9.IntroduceNullObject.example1.Customer;
 
 /**
  * @description:
@@ -11,7 +12,7 @@ public class Site {
     // Customer getCustomer() {
     //     return _customer;
     // }
-
+    // TODO: 关键方法
     Customer getCustomer() {
         return (_customer == null) ?
                 Customer.newNull() :
@@ -27,7 +28,8 @@ public class Site {
         Customer customer = site.getCustomer();
         BillingPlan plan;
         // if (customer == null) plan = BillingPlan.basic();
-        // TODO: ③ ==null 变成 isNull(这步没用)
+        // TODO: ③[可以略] ==null 变成 isNull(这步是null Object的核心，但是没有用，后面会被抹掉)
+        // TODO: example2，就是将isNull方法换成了  （customer instanceof Null），这样可以不修改原来Customer的代码
         // if (customer.isNull()) {
         //     plan = BillingPlan.basic();
         // } else {
