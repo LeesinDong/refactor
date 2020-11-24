@@ -2,6 +2,7 @@ package com.leesin.chapter9.IntroduceNullObject;
 
 import com.leesin.chapter9.IntroduceNullObject.example1.BillingPlan;
 import com.leesin.chapter9.IntroduceNullObject.example1.Customer;
+import com.sun.xml.internal.ws.developer.SerializationFeature;
 
 /**
  * @description:
