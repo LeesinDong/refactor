@@ -23,4 +23,11 @@ public class Site {
     Reading lastReading() {
         return (Reading) readings().lastElement();
     }
+
+
+    private <T> T getRequest(Object requestParam, T request) {
+        return (T) requestParam;
+    }
+    // 调用的地方
+    // getRequest(requestParam, new Request());
 }
