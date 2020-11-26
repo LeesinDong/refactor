@@ -27,6 +27,7 @@ public class Employee2 {
     // TODO: 工厂方法替换直接的构造方法，通过反射实现
     static Employee2 create(String name) {
         try {
+            // 或者传入class，直接class.newInstance()
             return (Employee2) Class.forName(name).newInstance();
         } catch (Exception e) {
             throw new IllegalArgumentException("Unable to instantiate" + name);
