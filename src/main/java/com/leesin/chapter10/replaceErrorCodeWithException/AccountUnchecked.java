@@ -1,16 +1,13 @@
 package com.leesin.chapter10.replaceErrorCodeWithException;
 
-import com.sun.org.glassfish.gmbal.Description;
-
 /**
- * @description:
+ * @description: unckecked异常
  * @author: dongxueyuan
  * @date: Created in 2020/11/26 1:43 下午
  */
 public class AccountUnchecked {
 
-
-    @Description("余额")
+    // 余额
     private int _balance;
 
     public static void main(String[] args) {
@@ -23,7 +20,7 @@ public class AccountUnchecked {
             doTheUsualThing();
         }
 
-        // TODO: 程序员自己在调用前需要做检查 余额是否充足
+        // TODO: 【调用方】程序员自己在调用前需要做检查 余额是否充足
         if (!account.canWithdraw(amount)) {
             // 检查余额不足无法取款，就处理透支的情况，不进行取款
             handleOverdrawn();
@@ -55,7 +52,7 @@ public class AccountUnchecked {
         return false;
     }
 
-    // TODO: 取款函数，移除错误码，抛出异常【如果取款的钱已经大于余额，即本方法本应该出现这种情况，则抛出异常，而不是给一个错误码】
+    // TODO: 【被调用方】取款函数，移除错误码，抛出异常
     int withdraw(int amount) {
         // 异常是罕见的，用卫语句表示
         if (amount > _balance) {
@@ -66,7 +63,7 @@ public class AccountUnchecked {
         return _balance;
     }
 
-    // （略）不重要，由于这是程序员所犯的错误，所以我应该使用assertion 更清楚地指出这一点：
+    // （略）下面不重要，由于这是程序员所犯的错误，所以我应该使用assertion 更清楚地指出这一点：
     void withdraw2(int amount) {
         Assert.isTrue("amount too large", amount > _balance);
         _balance -= amount;
