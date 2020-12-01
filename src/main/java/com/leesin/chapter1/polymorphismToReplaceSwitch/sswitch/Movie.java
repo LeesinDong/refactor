@@ -36,6 +36,7 @@ public class Movie {
 
     /**
      * 多态
+     * TODO: 这里可以换成直接反射工厂方法，主要就是上面的 多态调用_price.getCharge(daysRented);
      **/
     // public int getPriceCode() {    //取得价格代号
     //     return _price.getPriceCode();
