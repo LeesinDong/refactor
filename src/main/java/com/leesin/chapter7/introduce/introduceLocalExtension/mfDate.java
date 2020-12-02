@@ -1,4 +1,4 @@
-package com.leesin.chapter7.introduceLocalExtension;
+package com.leesin.chapter7.introduce.introduceLocalExtension;
 
 import java.util.Date;
 

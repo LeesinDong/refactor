@@ -1,4 +1,4 @@
-package com.leesin.chapter7.introduceLocalExtension.subclass;
+package com.leesin.chapter7.introduce.introduceLocalExtension.subclass;
 
 import java.util.Date;
 
@@ -30,9 +30,21 @@ class MfDateSub extends Date {
     }
 
     /**
-     * 把introduceForeignMethod的外加函数移到这里
+     * TODO: 变成调用当前类的父类，即也是自己的方法getYear()等
      **/
     Date nextDay() {
+        /**
+         * TODO: getYear()才是本质
+         **/
         return new Date(getYear(), getMonth(), getDate() + 1);
     }
+
+    /**
+     * 可以覆写父类的方法，然后调用被覆写的方法
+     **/
+    @Override
+    public boolean equals(Object arg) {
+        return false;
+    }
+
 }
